@@ -1,6 +1,6 @@
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
-import { EditScreenInfo } from './EditScreenInfo';
+import { Map } from './Map';
 
 type ScreenContentProps = {
   title: string;
@@ -11,9 +11,7 @@ type ScreenContentProps = {
 export const ScreenContent = ({ title, path, children }: ScreenContentProps) => {
   return (
     <View className={styles.container}>
-      <Text className={styles.title}>{title}</Text>
-      <View className={styles.separator} />
-      <EditScreenInfo path={path} />
+      <Map />
       {children}
     </View>
   );
